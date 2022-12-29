@@ -1,0 +1,68 @@
+[workspace]
+members = ["packages/*", "contracts/*"]
+
+[profile.release.package.cw1-subkeys]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw1-whitelist]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw3-fixed-multisig]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw3-flex-multisig]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw4-group]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw4-stake]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw20-base]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw20-ics20]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.cw1155-base]
+codegen-units = 1
+incremental = false
+
+[profile.release]
+rpath = false
+lto = true
+overflow-checks = true
+opt-level = 3
+debug = false
+debug-assertions = false
+
+[workspace.dependencies]
+cosmwasm-schema = "1.1.5"
+cosmwasm-std = "1.1.5"
+cw2 = "0.16.0"
+cw20 = "0.16.0"
+cw721 = { version = "0.16.0", path = "./packages/cw721" }
+cw721-base = { version = "0.16.0", path = "./contracts/cw721-base" }
+cw721-autoincrement-id = { version = "0.16.0", path = "./contracts/cw721-autoincrement-id" }
+cw-storage-plus = "0.16.0"
+cw-utils = "0.16.0"
+schemars = "0.8.10"
+serde = { version = "1.0.140", default-features = false, features = ["derive"] }
+thiserror = "1.0.31"
+
+[workspace.package]
+version = "0.16.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/CosmWasm/cw-nfts"
+homepage = "https://cosmwasm.com"
+documentation = "https://docs.cosmwasm.com"
