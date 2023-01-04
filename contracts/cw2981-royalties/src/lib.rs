@@ -46,8 +46,6 @@ pub struct Metadata {
 
 pub type Extension = Option<Metadata>;
 
-pub type MintExtension = Option<Extension>;
-
 pub type Cw2981Contract<'a> = Cw721Contract<'a, Extension, Empty, Empty, Cw2981QueryMsg>;
 pub type ExecuteMsg = cw721_base::ExecuteMsg<Extension, Empty>;
 pub type QueryMsg = cw721_base::QueryMsg<Cw2981QueryMsg>;
